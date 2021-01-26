@@ -1,5 +1,5 @@
 spring:
   redis:
-    host: 47.113.82.29
+    host: 121.4.39.153
     port: 6379
     password: scuiot
