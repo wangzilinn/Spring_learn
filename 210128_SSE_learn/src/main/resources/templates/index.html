@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/event-source-polyfill/0.0.9/eventsource.min.js"></script>
+</head>
+<body>
+<ul id="list">
+</ul>
+<ul id="list2">
+</ul>
+<script>
+    var source = new EventSource("/event");
+    source.onmessage = function(event) {
+        console.log(event.data)
+        var item = $("<li></li>").html(event.data);
+        $("#list").append(item);
+    }
+
+    source.addEventListener('alarm', function(event) {//
+        var item = $("<li></li>").html(event.data);
+        $("#list2").append("alarm");
+    });
+
+</script>
+</body>
+</html>
