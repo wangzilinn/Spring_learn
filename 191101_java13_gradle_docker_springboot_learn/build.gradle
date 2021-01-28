@@ -14,14 +14,14 @@ configurations {
 		extendsFrom developmentOnly
 	}
 }
-def localRepo = 'file://' + new File("D:\\LocalMavenRepo").absolutePath
+//def localRepo = 'file://' + new File("D:\\LocalMavenRepo").absolutePath
 repositories {
-	maven { url localRepo}
+//	maven { url localRepo}
 	mavenCentral()
 }
 
 dependencies {
-	implementation 'org.example:demo-springboot-starter:1.0-SNAPSHOT'
+//	implementation 'org.example:demo-springboot-starter:1.0-SNAPSHOT'
 
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
