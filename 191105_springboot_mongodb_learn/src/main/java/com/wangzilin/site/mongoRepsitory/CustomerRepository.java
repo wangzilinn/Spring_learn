@@ -1,4 +1,5 @@
-package com.wangzilin.site.accessingdatamongodb;
+package com.wangzilin.site.mongoRepsitory;
+import com.wangzilin.site.POJO.Customer;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;

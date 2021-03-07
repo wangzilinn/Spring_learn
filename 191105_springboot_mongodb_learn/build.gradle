@@ -1,12 +1,13 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.0.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+//	id "io.freefair.lombok"
+	id 'org.springframework.boot' version '2.4.3'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+
 }
 
 group = 'com.wangzilin'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
 
 configurations {
 	developmentOnly
@@ -16,6 +17,7 @@ configurations {
 }
 
 repositories {
+	maven { url 'https://maven.aliyun.com/repository/public/' }
 	mavenCentral()
 }
 
@@ -26,10 +28,12 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb
-	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.2.0.RELEASE'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb'
 	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-rest
-	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '2.2.0.RELEASE'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest'
+	annotationProcessor 'org.projectlombok:lombok:1.18.18'
 
+	compileOnly 'org.projectlombok:lombok:1.18.18'
 }
 
 test {

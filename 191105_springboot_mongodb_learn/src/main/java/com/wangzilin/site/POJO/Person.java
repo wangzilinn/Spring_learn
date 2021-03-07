@@ -1,4 +1,4 @@
-package com.wangzilin.site.accessingmongodbdatarest;
+package com.wangzilin.site.POJO;
 
 import org.springframework.data.annotation.Id;
 

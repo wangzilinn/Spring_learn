@@ -1,4 +1,4 @@
-package com.wangzilin.site.accessingdatamongodb;
+package com.wangzilin.site.POJO;
 
 import org.springframework.data.annotation.Id;
 

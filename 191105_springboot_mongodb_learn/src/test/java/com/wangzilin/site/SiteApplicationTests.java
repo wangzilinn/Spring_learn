@@ -8,6 +8,7 @@ class SiteApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("1111");
 	}
 
 }
